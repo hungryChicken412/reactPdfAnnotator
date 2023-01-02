@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was submitted as an assignment for an internship.
+## Usage
+Used to edit / create PDF annotations, highlighting text and saving the session in localstorage.
 
 ## Available Scripts
 
