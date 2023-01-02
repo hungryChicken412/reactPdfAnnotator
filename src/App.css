@@ -1,38 +1,131 @@
 .App {
-  text-align: center;
+	text-align: left;
+}
+body,
+html {
+	margin: 0 auto;
+}
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+	font-weight: bold;
+	border-bottom: 1px solid blue;
+	display: flex;
+	padding-left: 20px;
+	width: 16rem;
+}
+
+.editor {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.editor .edit-title-button,
+.edit-author-button {
+	padding: 20px;
+	background-color: #ee7d31;
+	border: 0;
+	margin: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+	font-weight: bold;
+}
+.rectangle {
+	border: 1px solid #ff0000;
+	position: absolute;
+}
+.editor-panel {
+	display: flex;
+	flex-direction: column;
+}
+
+canvas {
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	width: unset !important;
+	height: unset !important;
+}
+
+.Misc-button {
+	padding: 20px;
+	background-color: #31c8ee;
+	border: 0;
+	margin: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+	font-weight: bold;
+}
+
+.Misc-button:hover {
+	cursor: pointer;
+}
+.editor-panel-body {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.edit-author-button:hover,
+.edit-title-button:hover {
+	cursor: pointer;
+}
+.edit-author-button {
+	background-color: #71ac47;
+}
+
+.box-info {
+	font-weight: bold;
+}
+.box-info > span {
+	margin: 10px;
+}
+ul {
+	list-style: "- ";
+	font-size: large;
+	color: blue;
+	font-weight: bold;
+	padding: 40px;
+	padding-top: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pdf-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.pager {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	margin: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 900px) {
+	.title {
+		font-size: 1.5rem;
+		margin-left: 20px;
+		padding: 0;
+	}
+	ul,
+	li {
+		font-size: 1.5rem;
+		margin-left: 20px;
+	}
+	.editor {
+		flex-direction: column;
+		margin: 0;
+	}
 }
